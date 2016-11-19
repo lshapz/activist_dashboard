@@ -1,0 +1,2 @@
+class IssueTask < ApplicationRecord
+end
