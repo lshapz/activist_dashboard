@@ -3,7 +3,9 @@ class CreateTasks < ActiveRecord::Migration[5.0]
     create_table :tasks do |t|
       t.string :name
       t.string :todo
-      t.blob :resources
+      t.string :resources
+      t.integer :issue_id
+      t.integer :creator_user_id
 
       t.timestamps
     end
