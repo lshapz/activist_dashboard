@@ -1,24 +1,85 @@
-# README
+ToDo List:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Views:
+  Issues
+    index
+    show
+    new?? 
+      maybe be admin-only? 
+      or we can only add them straight into the database sans interface
+  Sessions
+    new
+    show
+  Tasks
+    new
+    edit
+    index
+    show
+      completed by current user
+      todo for current user
+      created by current user
+  Users
+    new
+    show
+    edit
+  Configure bootstrap or some other front end thing? 
+    if we do use bootstrap we should add JQuery locally not import
+  Decide how else to incorporate JS for slick no-refresh interfaces  
 
-Things you may want to cover:
+Controllers
+  Application
+    current_user and related login related tasks 
+  Issues
+    index
+    show
+    new??
+  Sessions
+    new
+    delete
+    show
+  Tasks
+    new
+    create
+    edit
+    update
+    index
+    show
+      completed by current user
+      todo for current user
+      created by current user
+  Users
+    new
+    create
+    show
+    edit
+    update
 
-* Ruby version
 
-* System dependencies
+Decisions: 
 
-* Configuration
+Should there be a UserIssues table that will determine which Tasks the User is shown? (ones relevant to her interests) 
+  if so, the user should still be able to see an all_tasks index 
 
-* Database creation
+do we want to save user zip codes?
+  is this US exclusive or can Scots use this to organize independence?
 
-* Database initialization
+Do we want there to be private tasks or tasks that are only visible to users with certain permissions? 
+  ActiveRecord question for self: when you create a migration to add a column (like admin status or special group membership) and set the default value to false does it retroactively apply it to users created before the migration 
 
-* How to run the test suite
+If we are going to seed the database with issues and not let users generate them, we'll need to generate a list 
 
-* Services (job queues, cache servers, search engines, etc.)
+We will also probably need to generate a bunch of seed tasks (actual actionable ones!) for demo/first user finding it
 
-* Deployment instructions
+Come up with a name
 
-* ...
+do we want to send emails to users?
+  following up about todos
+  listing potentially relevant new action items 
+
+Adapters for petition APIs to auto-create Tasks?
+  how will we determine which Issue they belong to 
+
+Eventually:
+  put on heroku 
+  send to everyone we know
+  

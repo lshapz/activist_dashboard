@@ -1,8 +1,8 @@
-class TaskController < ApplicationController
+class TasksController < ApplicationController
   def index
   end
 
-  def view
+  def show
   end
 
   def new
