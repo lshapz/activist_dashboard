@@ -28,13 +28,15 @@ ToDo List:
 
       index
 
-      show
-
         completed by current user
 
         todo for current user
 
         created by current user
+        
+        suggested for current user
+        
+      show
 
   Users
 
@@ -56,7 +58,7 @@ ToDo List:
 
   Application
 
-      current_user and related login related tasks 
+      current_user and login related tasks 
 
   Issues
 
@@ -85,14 +87,15 @@ ToDo List:
       update
 
       index
-
-      show
-
         completed by current user
 
         todo for current user
 
         created by current user
+        
+        suggested for current user
+
+      show     
 
   Users
 
