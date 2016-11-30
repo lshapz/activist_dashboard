@@ -13,7 +13,7 @@ dakota_pipeline = Issue.create(name: "Dakota Access Pipeline", description: "DAP
 call = Task.create(name: 'call your representative about Sessions', todo: 'phone call', resources: 'http://www.house.gov/htbin/findrep', issue_id: 1, creator_user_id: 1)
 sign = Task.create(name: 'faithless electors', todo: 'sign a petition', resources: 'https://www.change.org/p/electoral-college-electors-electoral-college-make-hillary-clinton-president-on-december-19', issue_id: 2, creator_user_id: 2)
 buy = Task.create(name: 'donate items to DAPL protestors', todo: 'go to wish list and buy them a thing', resources: 'http://sacredstonecamp.org/supply-list/', issue_id: 3, creator_user_id: 3)
-donate = Task.create(name: 'donate money to DAPL protestors', todo: 'contribute to linked gofundme', resources: 'https://www.gofundme.com/sacredstonecamp', issue_id: 3, creator_user_id:3)
+donate = Task.create(name: 'donate money to DAPL protestors', todo: 'contribute to linked gofundme', resources: 'https://www.gofundme.com/sacredstonecamp', issue_id: 3, creator_user_id: 3)
 #should tasks have a repeatable attribute? 
 
 user1 = User.create(name: Faker::Name.name, emailaddress: Faker::Internet.email, password: 'password') 
