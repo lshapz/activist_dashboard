@@ -9,7 +9,10 @@ class SessionsController < ApplicationController
     user = User.find_by(emailaddress: auth_params[:email])
     if user && user.authenticate(auth_params[:password])
       jwt = Auth.issue({user: user.id})
-      render json: {jwt: jwt}
+      # @users = User.all
+      
+      json: {jwt: jwt}
+      # redirect_to users_path
     else
       render json: {:errors=>
         [{:detail=>"incorrect email or password", 

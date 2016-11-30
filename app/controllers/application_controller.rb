@@ -6,12 +6,14 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-    if auth_present?
-      user = User.find(auth["user"])
-      if user
-        @current_user ||= user
-      end
-    end
+    User.find(Auth.decode(request.env["HTTP_AUTHORIZATION"])[0]["user_id"]) if request.env["HTTP_AUTHORIZATION"].present?
+
+    # if auth_present?
+    #   user = User.find(auth["user"])
+    #   if user
+    #     @current_user ||= user
+    #   end
+    # end
   end
 
    def protect_against_forgery?
@@ -20,7 +22,7 @@ class ApplicationController < ActionController::API
 
 
   def authenticate
-    render json: {error: "unauthorized"}, status: 404 unless logged_in?
+    render json: {error: "unauthorized"} unless logged_in?
   end
 
   private

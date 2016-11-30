@@ -1,3 +1,24 @@
 <p><%= @user.name %></p>
-
 <p> <%= @user.emailaddress %> </p>
+
+<h2>Created Tasks</h2>
+<ul><% @user.my_created_tasks.each do |task| %>
+<li>  <%= task.name %></li>
+<% end %>
+</ul>
+
+<h2>Completed Tasks</h2>
+<ul><% @user.my_completed_tasks.each do |task| %>
+<li>  <%= task.name %></li>
+<ul><li>  <%= task.todo %></li>
+<li>  <%= task.resources %></li></ul>
+<% end %>
+</ul>
+
+<h2>Todo List of Tasks</h2>
+<ul><% @user.my_todo_list.uniq.each do |task| %>
+<li>  <%= task.name %></li>
+<ul><li>  <%= task.todo %></li>
+<li>  <%= task.resources %></li></ul>
+<% end %>
+</ul>
