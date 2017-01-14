@@ -10,8 +10,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(auth_params[:password])
       jwt = Auth.issue({user: user.id})
       # @users = User.all
-      
-      json: {jwt: jwt}
+      render json: {jwt: jwt}
       # redirect_to users_path
     else
       render json: {:errors=>

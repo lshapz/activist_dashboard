@@ -9,6 +9,7 @@ class Auth
     JWT.decode(token, Rails.application.secrets[:secret_key_base], true, { :algorithm => 'HS256' })
   end
 end
+
 # class Auth
 #   ALGORITHM = 'HS256'
 

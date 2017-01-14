@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
-  before_action :authenticate 
+  # before_action :authenticate 
+  # protect_from_forgery with: :null_session
 
   def logged_in?
     !!current_user

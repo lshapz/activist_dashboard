@@ -28,8 +28,11 @@ ActiveRecord::Schema.define(version: 20161119003958) do
     t.string   "resources"
     t.integer  "issue_id"
     t.integer  "creator_user_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.boolean  "in_person",       default: false
+    t.boolean  "money",           default: false
+    t.boolean  "approved",        default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "user_tasks", force: :cascade do |t|

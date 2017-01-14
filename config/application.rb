@@ -27,6 +27,11 @@ module Activism
     #      resource '*', :headers => :any, :methods => [:get, :post, :options]
     #    end
       #  end
+  config.action_dispatch.default_headers = {
+    'Access-Control-Allow-Origin' => 'localhost:3001',
+    'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+  }
+
     config.autoload_paths << Rails.root.join("lib")  
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
