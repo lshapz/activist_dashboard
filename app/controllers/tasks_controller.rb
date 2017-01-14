@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  skip_before_action :authenticate
+  # skip_before_action :authenticate
 
   def index
     tasks = Task.all
