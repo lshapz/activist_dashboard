@@ -12,18 +12,18 @@ equality = Issue.create(name: "Equality")
 economy = Issue.create(name: "Economy")
 foreign = Issue.create(name: "Foreign Policy")
 healthcare = Issue.create(name: "Healthcare")
+d = "donate"
+sierra = Task.create(name: "Sierra Club", todo: d, resources: "https://vault.sierraclub.org/ways-to-give/#donate-maintab", issue_id: 1, money: true, approved: true)
 
-sierra = Task.create(name: "Sierra Club", todo: "donate", resources: "https://vault.sierraclub.org/ways-to-give/#donate-maintab", issue_id: 1, money: true, approved: true)
+boysngirls = Task.create(name: "Boys & Girls Clubs of America", todo: d, resources: "http://greatfutures.org/pages/waystogive.aspx?_ga=1.12737010.43999393.1478702949", issue_id: 2, money: true, approved: true)
 
-boysngirls = Task.create("Boys & Girls Clubs of America", todo: "donate", resources: "http://greatfutures.org/pages/waystogive.aspx?_ga=1.12737010.43999393.1478702949", issue_id: 2, money: true, approved: true)
+trevor = Task.create(name: "Trevor Project", todo: d, resources: "https://give.thetrevorproject.org/checkout/donation?eid=63307", issue_id: 3, money: true, approved: true)
 
-trevor = Task.create(name: "Trevor Project", todo: "donate", resources: "https://give.thetrevorproject.org/checkout/donation?eid=63307", issue_id: 3, money: true, approved: true)
+naacp = Task.create(name: "NAACP", todo: d, resources: "https://donate.naacp.org/page/contribute/make-a-contribution", issue_id: 3, money: true, approved: true)
 
-naacp = Task.create(name: "NAACP", todo: "donate", resources: "https://donate.naacp.org/page/contribute/make-a-contribution", issue_id: 3, money: true, approved: true)
+jobs = Task.create(name: "National Jobs for All", todo: d, resources: "http://njfac.org/index.php/support-njfac/", issue_id: 4, money: true, approved: true)
 
-jobs = Task.create(name: "National Jobs for All", todo: "donate", resources: "http://njfac.org/index.php/support-njfac/", issue_id: 4, money: true, approved: true)
-
-kind = Task.create("Kids In Need of Defense (Kind)", todo: "donate", resources: "https://supportkind.org/donate/", issue_id: 5, money: true, approved: true)
+kind = Task.create(name: "Kids In Need of Defense (Kind)", todo: d, resources: "https://supportkind.org/donate/", issue_id: 5, money: true, approved: true)
 
 crisis = Task.create(name: "Crisis Text Line", todo: "volunteer", resources: "http://www.crisistextline.org/join-our-efforts/volunteer/", issue_id: 6, approved: true)
 
